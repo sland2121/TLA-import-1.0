@@ -46,9 +46,9 @@ def T7(TLA_dict):
     cursor.execute(sql)
     
     #compute
-    sql = "UPDATE %s SET col1_B = '%s'\
+    sql = "UPDATE %s SET col1_A='%s', col1_B = '%s', col1_C='%s'\
         WHERE desc1 LIKE '%s'"%(TLA_dict['TLA_name'], TLA_dict['Server PN'], TLA_dict['Server PN'],\
-                                'compute-%')
+                                TLA_dict['Server PN'],'compute-%')
     cursor.execute(sql)
     
     #storage
