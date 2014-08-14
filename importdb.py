@@ -89,7 +89,7 @@ def importTLATable(TLA_dict):
 importTLAtoDB:
 import all TLAs in spreadsheet into RCKHYVEDB.
 """
-def importTLAtoDB(TLA_workbook):
+def importAllTLAtoDB(TLA_workbook):
     font = TLA_workbook.font_list
     TLA_sheet = TLA_workbook.sheet_by_name('TLA - TOP SKUs')
     

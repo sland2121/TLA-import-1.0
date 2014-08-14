@@ -8,7 +8,7 @@ TLAdb_import_tool.py sets up the gui tool for user to import TLAs.
 
 import config
 import MySQLdb
-from importdb import importTLAtoDB
+import importdb
 import Tkinter as tk
 import tkFileDialog as tkfd
 import tkMessageBox as tkmb
@@ -32,10 +32,11 @@ def openFile():
             
             #option 1: import all TLAs
             tk.Button(root, text = "Import ALL TLAs", command = \
-                      lambda: importTLAtoDB(TLA_workbook)).pack()
+                      lambda: importdb.importAllTLAtoDB(TLA_workbook)).pack()
 
             #option 2: import inputted TLAs
-            tk.Button(root, text = "Input TLAs to import", command = lambda: inputTLAs(TLA_workbook)).pack()
+            tk.Button(root, text = "Input TLAs to import",
+                      command = lambda: inputTLAs(TLA_workbook)).pack()
             tkmb.showinfo("Success!", "Spreadsheet successfully loaded.")
         except:
             tkmb.showerror("Error", "Failed to read file\n '%s'\n\
@@ -49,7 +50,7 @@ def import_input_TLAs(TLA_entries_str, TLA_workbook):
     #format input into list type
     TLA_entries_list = TLA_entries_str.replace(" ", "").split(",")
     
-    importTLAtoDB(TLA_workbook, \
+    importdb.importTLAtoDB(TLA_workbook, \
                   TLA_entries_list)
 """
 inputTLAs:
