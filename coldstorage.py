@@ -1,4 +1,8 @@
 """
+author: Sayeri Lala
+7-9-2014
+Synnex Co., Hyve Solutions, Fremont
+
 cold storage.py contains methods for creating MySQL database tables for
 various cold storage rack types.
 """

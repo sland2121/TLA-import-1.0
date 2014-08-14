@@ -1,4 +1,8 @@
 """
+author: Sayeri Lala
+7-9-2014
+Synnex Co., Hyve Solutions, Fremont
+
 leopard.py contains methods for creating MySQL database tables for
 various leopard rack types.
 """

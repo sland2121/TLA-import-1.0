@@ -1,4 +1,8 @@
 """
+author: Sayeri Lala
+7-9-2014
+Synnex Co., Hyve Solutions, Fremont
+
 piranha.py contains methods for creating MySQL database tables for
 various piranha rack types.
 """

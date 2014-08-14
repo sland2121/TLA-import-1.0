@@ -1,4 +1,8 @@
 """
+author: Sayeri Lala
+7-9-2014
+Synnex Co., Hyve Solutions, Fremont
+
 TLAdb_import_tool.py sets up the gui tool for user to import TLAs.
 """
 
