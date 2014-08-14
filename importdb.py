@@ -92,8 +92,14 @@ import all TLAs in spreadsheet into RCKHYVEDB.
 def importAllTLAtoDB(TLA_workbook):
     font = TLA_workbook.font_list
     TLA_sheet = TLA_workbook.sheet_by_name('TLA - TOP SKUs')
+    mixed_TLAs = []
     
     for i in range(1,TLA_sheet.nrows):
+        #break from loop upon last row
+        if not TLA_sheet.cell_value(i,0):
+            break
+        
+        
         #skip racks with mixed component p/n
         if font[TLA_workbook.xf_list\
                             [TLA_sheet.cell_xf_index(i,0)].font_index].italic == 1:
@@ -136,6 +142,10 @@ def importTLAtoDB(TLA_workbook, input_TLAs):
 
     mixed_TLAs = []
     for i in range(1,TLA_sheet.nrows):
+        #break from loop upon last row
+        if not TLA_sheet.cell_value(i,0):
+            break
+        
         #skip TLAs not in inputted TLAs
         if TLA_sheet.cell_value(i,0) not in input_TLAs:
             continue
